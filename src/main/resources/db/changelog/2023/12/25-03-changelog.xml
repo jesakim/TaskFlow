@@ -6,7 +6,7 @@
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
 
     <changeSet id="1704202349810-1"
-               author="momos (generated)">
+               author="jamal (generated)">
         <createTable tableName="request_manager">
             <column autoIncrement="true"
                     name="id"
@@ -26,7 +26,7 @@
         </createTable>
     </changeSet>
     <changeSet id="1704202349810-2"
-               author="momos (generated)">
+               author="jamal (generated)">
         <createTable tableName="task">
             <column autoIncrement="true"
                     name="id"
@@ -56,7 +56,7 @@
         </createTable>
     </changeSet>
     <changeSet id="1704202349810-3"
-               author="momos (generated)">
+               author="jamal (generated)">
         <createTable tableName="task_tags">
             <column name="task_id"
                     type="BIGINT">
@@ -67,7 +67,7 @@
         </createTable>
     </changeSet>
     <changeSet id="1704202349810-4"
-               author="momos (generated)">
+               author="jamal (generated)">
         <createTable tableName="user">
             <column autoIncrement="true"
                     name="id"
@@ -91,19 +91,19 @@
         </createTable>
     </changeSet>
     <changeSet id="1704202349810-5"
-               author="momos (generated)">
+               author="jamal (generated)">
         <addUniqueConstraint columnNames="email"
                              constraintName="uc_user_email"
                              tableName="user"/>
     </changeSet>
     <changeSet id="1704202349810-6"
-               author="momos (generated)">
+               author="jamal (generated)">
         <addUniqueConstraint columnNames="user_name"
                              constraintName="uc_user_username"
                              tableName="user"/>
     </changeSet>
     <changeSet id="1704202349810-7"
-               author="momos (generated)">
+               author="jamal (generated)">
         <addForeignKeyConstraint baseColumnNames="user_id"
                                  baseTableName="request_manager"
                                  constraintName="FK_REQUESTMANAGER_ON_USER"
@@ -111,7 +111,7 @@
                                  referencedTableName="user"/>
     </changeSet>
     <changeSet id="1704202349810-8"
-               author="momos (generated)">
+               author="jamal (generated)">
         <addForeignKeyConstraint baseColumnNames="assigned_to_id"
                                  baseTableName="task"
                                  constraintName="FK_TASK_ON_ASSIGNED_TO"
@@ -119,7 +119,7 @@
                                  referencedTableName="user"/>
     </changeSet>
     <changeSet id="1704202349810-9"
-               author="momos (generated)">
+               author="jamal (generated)">
         <addForeignKeyConstraint baseColumnNames="user_id"
                                  baseTableName="task"
                                  constraintName="FK_TASK_ON_USER"
@@ -127,7 +127,7 @@
                                  referencedTableName="user"/>
     </changeSet>
     <changeSet id="1704202349810-10"
-               author="momos (generated)">
+               author="jamal (generated)">
         <addForeignKeyConstraint baseColumnNames="task_id"
                                  baseTableName="task_tags"
                                  constraintName="fk_task_tags_on_task"
